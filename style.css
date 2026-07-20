@@ -1,0 +1,161 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navigation */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #2c3e50;
+    color: white;
+    padding: 15px 30px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    color: #f1c40f;
+}
+
+/* Header */
+.header {
+    background: #3498db;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+/* Main Content */
+.container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+.content {
+    flex: 3;
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.sidebar {
+    flex: 1;
+    background: #ecf0f1;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+/* Footer */
+.footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* ==========================
+   Mobile Devices
+   max-width: 768px
+========================== */
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .header h1 {
+        font-size: 24px;
+    }
+
+    .header p,
+    .content p,
+    .sidebar p {
+        font-size: 16px;
+    }
+}
+
+/* ==========================
+   Tablet Devices
+   769px - 1024px
+========================== */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    .container {
+        flex-direction: row;
+    }
+
+    .content {
+        flex: 2;
+    }
+
+    .sidebar {
+        flex: 1;
+    }
+
+    .header h1 {
+        font-size: 32px;
+    }
+}
+
+/* ==========================
+   Desktop Devices
+   1025px and above
+========================== */
+@media (min-width: 1025px) {
+
+    .container {
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .header h1 {
+        font-size: 40px;
+    }
+
+    .header p {
+        font-size: 20px;
+    }
+}
